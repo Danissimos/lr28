@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Лабораторная 28</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+      .div1{
+          display: inline-block;
+      }
+      .div2{
+          width: 80%;
+          border: 6px double gold;
+          border-radius: 20px;
+      }
+  </style>
+</head>
+<body id="img"><center>
+    <div class="div2"><h1>Сортировка массива при помощи join()</h1>
+    <div class="div1"><p>Снег, Ветер, Дождь, Град, Кот.</p>
+    <button value="" type="button" onclick="s1()">без пробелов</button>
+    <button value="" type="button" onclick="s2()">запятая</button>
+    <button value="" type="button" onclick="s3()">плюсик</button>
+    </div></div>
+    <div class="div2"><h1>Сортировка массива при помощи reverse()</h1>
+    <p>один, два, три</p>
+    <button value="" type="button" onclick="s4()">начать с конца</button></div>
+    <div class="div2"><h1>Сортировка массива при помощи sort()</h1>
+    <p>7, 5, 3</p>
+    <button value="" type="button" onclick="s5()">сортировка</button></div>
+    <div class="div2"><h1>Применение eval()</h1>
+    <button value="" type="button" onclick="s6()">Нажмите для подсчета суммы введенных чисел</button></div>
+    <script>
+        function s6(){var x,y;
+        x=prompt('Введите первое число ');
+        x=parseInt(x);
+        y=prompt('Введите второе число ');
+        y=parseInt(y);
+        let z = eval(x + y);
+        alert('Сумма введенных ваших чисел равна ' + z);}
+    </script>
+    <div class="div2"><h1>Приминение операторов</h1>
+    <div class="div1">
+        <button value="" type="button" onclick="s7()">Нажмите для подсчета остатка от деления введенных чисел(оператор взятия остатка)</button></div>
+        <script>
+                function s7(){var x,y;
+                x=prompt('Введите первое число ');
+                x=parseInt(x);
+                y=prompt('Введите второе число ');
+                y=parseInt(y);
+                let z = eval(x % y);
+                alert('Остаток от деления чисел равен ' + z);}
+            </script>
+        <button value="" type="button" onclick="s8()">Нажмите для инкрементации</button>
+        <script>
+                function s8(){var x,y;
+                x=prompt('Введите число ');
+                x=parseInt(x);
+                x++;
+                alert('Полученное число ' + x);}
+            </script>
+        <button value="" type="button" onclick="s9()">Нажмите для декрементации</button>
+        <script>
+            function s9(){var x,y;
+            x=prompt('Введите число ');
+            x=parseInt(x);
+            x--;
+            alert('Полученное число ' + x);}
+        </script>
+    </div>
+    <div class="div2"><h1>Вычисление корней квадратного уравнения</h1>
+    <p>Квадратное уравнение имеет вид ax<sup>2</sup> + bx + c = 0, поэтому для нахождения решения необходимо указать все переменные(a, b и c)</p>
+    <button value="" type="button" onclick="s10()">Ну что ж, начнем</button></div>
+    <script>
+            function s10(){
+            var a,b, c;
+            a=prompt(' Введите a: ');
+            a=parseInt(a);
+            b=prompt('Введите b: ');
+            b=parseInt(b);
+            c=prompt('Введите c: ');
+            c=parseInt(c);
+            var D = ((b*b)-(4*a*c));
+            if (D>0){
+            var x1, x2;
+            x1 = ((-b)+(Math.sqrt(D)))/(2*a);
+            x2 = ((-b)-(Math.sqrt(D)))/(2*a);
+            alert(`Корни квадратного уравнения: ${x1} и ${x2} `);
+            }
+            if (D=0){
+                var x3;
+                x3= ((-b)/(2*a));
+                alert('Корень квадратного уравнения: ' + x3);
+            }
+            if (D<0){
+                alert('У квадратного уравнения нет корней');
+            }
+        }
+        </script>
+</center></body>
+<script src="script.js"></script>
+</html>
